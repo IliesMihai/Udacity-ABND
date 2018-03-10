@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ScoreTracker</string>
+    <string name="button_start">Start</string>
+    <string name="button_track">Track</string>
+    <string name="team_title">Enter the name of each team</string>
+    <string name="firstTeam_hint">First Team Name</string>
+    <string name="secondTeam_hint">Second Team Name</string>
+    <string name="three_points">3 Points</string>
+    <string name="two_points">2 Points</string>
+    <string name="free_throw">Free Throw</string>
+    <string name="fouls">Fouls</string>
+    <string name="foul">Foul</string>
+    <string name="reset_button">Reset</string>
+    <string name="logo">Score Tracker, track your game</string>
+    <string name="first_team_name">First Team</string>
+    <string name="second_team_name">Second Team</string>
+    <string name="three_points_A">Add three points to the team on the left side</string>
+    <string name="three_points_B">Add three points to the team on the right side</string>
+    <string name="two_points_A">Add two points to the team on the left side</string>
+    <string name="two_points_B">Add two points to the team on the right side</string>
+    <string name="one_point_A">Add one point to the team on the left side</string>
+    <string name="one_point_B">Add one point to the team on the right side</string>
+    <string name="foul_team_A">Add one foul to the team on the left side</string>
+    <string name="foul_team_B">Add one foul to the team on the right side</string>
+</resources>
