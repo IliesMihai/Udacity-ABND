@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "78640960346",
+    "firebase_url": "https://hearthstonequiz-f6c35.firebaseio.com",
+    "project_id": "hearthstonequiz-f6c35",
+    "storage_bucket": "hearthstonequiz-f6c35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78640960346:android:a57757b7d48d2441",
+        "android_client_info": {
+          "package_name": "com.example.mihai.hearthstonequiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78640960346-2e0887iqd1rmr3469knfa5gnnlqcj8mg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mihai.hearthstonequiz",
+            "certificate_hash": "c2a4704019ddbf5b5f472251c098cf010a9cf3cf"
+          }
+        },
+        {
+          "client_id": "78640960346-uibsfv6o9v7ghp3aqldqd6oub5r8585b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4jF3ZRdRwq7WNBrCY1lOlg2vO0hGCmZA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78640960346-uibsfv6o9v7ghp3aqldqd6oub5r8585b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
