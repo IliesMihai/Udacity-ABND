@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">QuizGame</string>
+    <string name="start">Start</string>
+    <string name="question2">2.What is the name of the character?</string>
+    <string name="characterName">Enter name here</string>
+    <string name="question1">1.Hearthstone is a game of?</string>
+    <string name="radio1">Cards</string>
+    <string name="radio2">Chess</string>
+    <string name="radio3">Shooter</string>
+    <string name="radio4">World domination</string>
+    <string name="question3">3.It\'s the end of the year of the ?</string>
+    <string name="radio11">Cat</string>
+    <string name="radio22">Dolphin</string>
+    <string name="radio33">Squirrel</string>
+    <string name="radio44">Mammoth</string>
+    <string name="question4">4.What\'s happening to Hearthstone in mid april?</string>
+    <string name="checkBox1">The Witchwood</string>
+    <string name="checkBox2">Knights of the Frozen Throne</string>
+    <string name="checkBox3">Year of the Raven</string>
+    <string name="checkBox4">Year of the Dolphin</string>
+    <string name="question5">5.What is the name of the character?</string>
+    <string name="submit">Submit</string>
+    <string name="tryAgain">Try Again</string>
+</resources>
