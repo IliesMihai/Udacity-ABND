@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Done extends AppCompatActivity {
 
@@ -25,6 +26,8 @@ public class Done extends AppCompatActivity {
         if (extra != null) {
             int score = extra.getInt("SCORE");
             int questionAnswerd = extra.getInt("QUESTIONS");
+
+            Toast.makeText(Done.this, String.format("Your score is : %d",score), Toast.LENGTH_SHORT).show();
 
             scoreTxt.setText(String.format("SCORE : %d",score));
             questionsTxt.setText(String.format("CORRECT ANSWERS : %d",questionAnswerd));

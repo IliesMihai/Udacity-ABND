@@ -1,8 +1,8 @@
 package com.example.mihai.quizgame;
 
-import android.content.DialogInterface;
+
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 public class Playing extends AppCompatActivity {
@@ -23,7 +23,7 @@ public class Playing extends AppCompatActivity {
     private RadioGroup radioGroup1, radioGroup2;
     private RadioButton radioButton1, radioButton2;
     private EditText editText, editText2;
-    private CheckBox checkBox1, checkBox2;
+    private CheckBox checkBox1,checkBox2, checkBox3, checkBox4;
     private Button submitBtn;
 
     @Override
@@ -40,7 +40,10 @@ public class Playing extends AppCompatActivity {
         radioGroup2 = findViewById(R.id.group2);
         editText = findViewById(R.id.second_q_answer);
         checkBox1 = findViewById(R.id.checkbox1);
-        checkBox2 = findViewById(R.id.checkbox3);
+        checkBox2 = findViewById(R.id.checkbox2);
+        checkBox3 = findViewById(R.id.checkbox3);
+        checkBox4 = findViewById(R.id.checkbox4);
+
         editText2 = findViewById(R.id.last_q_answer);
         submitBtn = findViewById(R.id.submit_btn);
 
@@ -62,16 +65,14 @@ public class Playing extends AppCompatActivity {
 
     }
 
-    public void getAnswer() {
+    private void getAnswer() {
 
         int radioId1 = radioGroup1.getCheckedRadioButtonId();
         radioButton1 = findViewById(radioId1);
         int radioId2 = radioGroup2.getCheckedRadioButtonId();
         radioButton2 = findViewById(radioId2);
 
-        if (radioId1 == -1) {
-            AlertDialog.Builder alertDialog = new AlertDialog.Builder(Playing.this);
-        } else {
+        if (radioId1 != -1) {
             if (correctAnswer.contains(radioButton1.getText().toString().toLowerCase())) {
                 score += 25;
                 questionAnswered += 1;
@@ -83,16 +84,14 @@ public class Playing extends AppCompatActivity {
             questionAnswered += 1;
         }
 
-        if (radioId2 == -1) {
-            AlertDialog.Builder alertDialog = new AlertDialog.Builder(Playing.this);
-        } else {
+        if (radioId2 != -1) {
             if (correctAnswer.contains(radioButton2.getText().toString().toLowerCase())) {
                 score += 15;
                 questionAnswered += 1;
             }
         }
 
-        if (checkBox1.isChecked() && checkBox2.isChecked()) {
+        if ((checkBox1.isChecked() && checkBox3.isChecked()) && !(checkBox2.isChecked() && checkBox3.isChecked())) {
             score += 25;
             questionAnswered += 1;
         }
