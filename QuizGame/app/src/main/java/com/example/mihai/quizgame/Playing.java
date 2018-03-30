@@ -19,11 +19,11 @@ public class Playing extends AppCompatActivity {
 
     ArrayList<String> correctAnswer = new ArrayList<>();
 
-    private int score=0, questionAnswered=0;
+    private int score = 0, questionAnswered = 0;
     private RadioGroup radioGroup1, radioGroup2;
     private RadioButton radioButton1, radioButton2;
     private EditText editText, editText2;
-    private CheckBox checkBox1,checkBox2, checkBox3, checkBox4;
+    private CheckBox checkBox1, checkBox2, checkBox3, checkBox4;
     private Button submitBtn;
 
     @Override
@@ -61,8 +61,6 @@ public class Playing extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 
     private void getAnswer() {

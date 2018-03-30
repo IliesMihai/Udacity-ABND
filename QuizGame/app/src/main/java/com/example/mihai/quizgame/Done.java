@@ -27,10 +27,10 @@ public class Done extends AppCompatActivity {
             int score = extra.getInt("SCORE");
             int questionAnswerd = extra.getInt("QUESTIONS");
 
-            Toast.makeText(Done.this, String.format("Your score is : %d",score), Toast.LENGTH_SHORT).show();
+            Toast.makeText(Done.this, String.format("Your score is : %d", score), Toast.LENGTH_SHORT).show();
 
-            scoreTxt.setText(String.format("SCORE : %d",score));
-            questionsTxt.setText(String.format("CORRECT ANSWERS : %d",questionAnswerd));
+            scoreTxt.setText(String.format("SCORE : %d", score));
+            questionsTxt.setText(String.format("CORRECT ANSWERS : %d", questionAnswerd));
         }
 
         tryAgainBtn.setOnClickListener(new View.OnClickListener() {
