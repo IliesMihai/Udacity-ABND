@@ -10,13 +10,13 @@ import android.widget.Toast;
 
 public class Done extends AppCompatActivity {
 
-    private TextView scoreTxt, questionsTxt;
-    private Button tryAgainBtn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_done);
+
+        TextView scoreTxt, questionsTxt;
+        Button tryAgainBtn;
 
         scoreTxt = findViewById(R.id.score_txt);
         questionsTxt = findViewById(R.id.question_txt);
