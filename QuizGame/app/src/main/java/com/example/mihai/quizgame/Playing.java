@@ -89,7 +89,7 @@ public class Playing extends AppCompatActivity {
             }
         }
 
-        if ((checkBox1.isChecked() && checkBox3.isChecked()) && !(checkBox2.isChecked() && checkBox3.isChecked())) {
+        if ((checkBox1.isChecked() && checkBox3.isChecked()) && !(checkBox2.isChecked() || checkBox4.isChecked())) {
             score += 25;
             questionAnswered += 1;
         }
