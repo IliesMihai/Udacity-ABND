@@ -29,7 +29,8 @@ public class Player extends AppCompatActivity {
     SeekBar songBar, volumeBar;
     TextView timePassed, timeRemaining, songInfo;
     MediaPlayer mediaPlayer;
-    int totalTime;
+    int totalTime, audioKey;
+    String artist, title;
     private AudioManager audioManager;
 
     AudioManager.OnAudioFocusChangeListener onAudioFocusChangeListener =
@@ -63,15 +64,17 @@ public class Player extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         if (bundle != null) {
-            String artist = bundle.getString("ARTIST");
-            String title = bundle.getString("TITLE");
-            int audioKey = bundle.getInt("KEY");
+            artist = bundle.getString("ARTIST");
+            title = bundle.getString("TITLE");
+            audioKey = bundle.getInt("KEY");
 
             releaseMediaPlayer();
-
+        }
             Song song = new Song(artist, title, audioKey);
+
             int result = audioManager.requestAudioFocus(onAudioFocusChangeListener,
                     audioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
             if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
                 mediaPlayer = MediaPlayer.create(this, song.getAudio());
                 mediaPlayer.start();
@@ -83,7 +86,7 @@ public class Player extends AppCompatActivity {
                     }
                 });
             }
-        }
+
         mediaPlayer.setLooping(true);
         mediaPlayer.seekTo(0);
         mediaPlayer.setVolume(0.5f, 0.5f);
@@ -202,6 +205,18 @@ public class Player extends AppCompatActivity {
             timeRemaining.setText("- " + remainingTime);
         }
     };
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        if (mediaPlayer != null) {
+            if (mediaPlayer.isPlaying()) {
+                playBtn.setBackgroundResource(R.drawable.ic_play_arrow_black_24dp);
+                mediaPlayer.pause();
+            }
+        }
+    }
 
     private void releaseMediaPlayer() {
         if (mediaPlayer != null) {
